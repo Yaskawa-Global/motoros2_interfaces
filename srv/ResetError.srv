@@ -1,0 +1,17 @@
+
+# Attempts to reset active alarms and errors on the robot. This also clears any
+# active errors internal to MotoROS2.
+#
+# This service will fail if the active alarm number is less than 8000. These
+# alarms cannot be reset remotely and usually indicate a hardware or setting fault.
+
+---
+# Result of the service invocation. Values other than one (1) signal failure.
+#
+# Refer to MotionReadyEnum.msg for defined values
+#
+# NOTE: future versions of this service may use a different set of result codes
+MotionReadyEnum result_code
+
+# string representation of the value in 'result_code', for humans
+string message

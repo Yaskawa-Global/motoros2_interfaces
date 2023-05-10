@@ -1,0 +1,21 @@
+
+# Enable the robot and activate the trajectory motion mode. This service must
+# be invoked prior to using the 'follow_joint_trajectory' action server.
+#
+# It is recommended to monitor the 'robot_status' topic prior to invoking this
+# service. This service can only succeed if 'mode' == AUTO, 'e_stopped' == FALSE,
+# and 'in_error' == FALSE. If there is an active error, it should be cleared with
+# the 'reset_error' service.
+#
+# If this service is successful, the returned 'result_code' will indicate 'READY'.
+
+---
+# Result of the service invocation. Values other than one (1) signal failure.
+#
+# Refer to MotionReadyEnum.msg for defined values
+#
+# NOTE: future versions of this service may use a different set of result codes
+MotionReadyEnum result_code
+
+# string representation of the value in 'result_code', for humans
+string message

@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: 2023, Yaskawa America, Inc.
+# SPDX-FileCopyrightText: 2023, Delft University of Technology
+#
+# SPDX-License-Identifier: CC0-1.0
+
+root = true
+
+[*]
+insert_final_newline = true
+indent_style = space

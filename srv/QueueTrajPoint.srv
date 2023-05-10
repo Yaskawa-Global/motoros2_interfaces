@@ -1,0 +1,18 @@
+
+# Submit a trajectory point to the continuous motion queue.
+#
+# The start_point_queue_mode service must have been invoked first
+
+string[] joint_names
+trajectory_msgs/JointTrajectoryPoint point
+
+---
+# Result of the service invocation. Values other than one (1) signal failure.
+#
+# Refer to QueueResultEnum.msg for defined values
+#
+# NOTE: future versions of this service may use a different set of result codes
+QueueResultEnum result_code
+
+# string representation of the value in 'result_code', for humans
+string message
