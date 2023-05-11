@@ -1,0 +1,5 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: motoros2_interfaces
+Upstream-Contact: Ted Miller <ted.miller@motoman.com>
+  G. vd. Hoorn <g.a.vanderhoorn@tudelft.nl>
+Source: https://github.com/yaskawa-global/motoros2_interfaces

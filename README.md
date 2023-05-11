@@ -1,3 +1,10 @@
+<!--
+SPDX-FileCopyrightText: 2022-2023, Yaskawa America, Inc.
+SPDX-FileCopyrightText: 2022-2023, Delft University of Technology
+
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+
 # motoros2_interfaces
 
 [![Github Issues](https://img.shields.io/github/issues/yaskawa-global/motoros2_interfaces.svg)](http://github.com/yaskawa-global/motoros2_interfaces/issues)

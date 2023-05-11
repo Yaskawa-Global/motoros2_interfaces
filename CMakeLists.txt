@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2022-2023, Yaskawa America, Inc.
+# SPDX-FileCopyrightText: 2022-2023, Delft University of Technology
+#
+# SPDX-License-Identifier: Apache-2.0
+
 cmake_minimum_required(VERSION 3.5)
 project(motoros2_interfaces)
 
