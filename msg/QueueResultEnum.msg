@@ -20,4 +20,7 @@ string BUSY_STR="Busy processing the previous trajectory point. Please resend th
 uint8 INVALID_JOINT_LIST=5
 string INVALID_JOINT_LIST_STR="Point must contain data for all joints"
 
+uint8 UNABLE_TO_PROCESS_POINT=6
+string UNABLE_TO_PROCESS_POINT_STR="Error while processing the trajectory point. Check debug log for more details"
+
 uint8 value
