@@ -29,6 +29,14 @@ No guarantees are given about backwards-compatibility of message, service and/or
 Whenever possible, a *tick-tock* deprecation model will be used to provide users of deprecated versions of messages the ability to migrate without too much interruption.
 Without support in the ROS 2 message infrastructure for optional fields or default values however, this may not always be feasible.
 
+## Supported ROS 2 versions
+
+This package supports ROS 2 Foxy, Galactic and Humble.
+It is expected to also build successfully on other versions of ROS 2, but has only been tested on the previously mentioned releases.
+
+Please also take the compatibility of MotoROS2 with various ROS 2 releases into account.
+This information can be found in the [General Requirements](https://github.com/Yaskawa-Global/motoros2/blob/main/README.md#general-requirements) section of the main readme of MotoROS2 itself.
+
 ## Intended usage
 
 Use the message definitions with subscribers and publishers, and any service and action definitions to create service or action clients.
