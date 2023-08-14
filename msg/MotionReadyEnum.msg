@@ -50,7 +50,7 @@ uint16 NOT_READY_PFL_ACTIVE=111
 string NOT_READY_PFL_ACTIVE_STR="A PFL event has occurred. Please return the robot to a safe state"
 
 uint16 NOT_READY_INC_MOVE_ERROR=112
-string NOT_READY_INC_MOVE_ERROR_STR="There was an error with the internal motion API"
+string NOT_READY_INC_MOVE_ERROR_STR="The controller is in an error state. Please call reset_error to attempt to clear the error"
 
 uint16 NOT_READY_OTHER_PROGRAM_RUNNING=113
 string NOT_READY_OTHER_PROGRAM_RUNNING_STR="Controller is running another job"
