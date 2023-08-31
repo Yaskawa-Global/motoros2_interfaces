@@ -7,10 +7,14 @@ cmake_minimum_required(VERSION 3.5)
 project(motoros2_interfaces)
 
 find_package(ament_cmake REQUIRED)
+find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(trajectory_msgs REQUIRED)
 
 set(msg_files
+  msg/AlarmInfo.msg
+  msg/AlarmCauseRemedy.msg
+  msg/ErrorInfo.msg
   msg/IoResultCodes.msg
   msg/MotionReadyEnum.msg
   msg/QueueResultEnum.msg
@@ -18,6 +22,7 @@ set(msg_files
 )
 
 set(srv_files
+  srv/GetActiveAlarmInfo.srv
   srv/QueueTrajPoint.srv
   srv/ReadMRegister.srv
   srv/ReadSingleIO.srv
@@ -39,7 +44,7 @@ endif()
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${msg_files}
   ${srv_files}
-  DEPENDENCIES trajectory_msgs
+  DEPENDENCIES builtin_interfaces trajectory_msgs
   ADD_LINTER_TESTS
 )
 
