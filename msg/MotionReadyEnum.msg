@@ -58,4 +58,7 @@ string NOT_READY_OTHER_PROGRAM_RUNNING_STR="Controller is running another job"
 uint16 NOT_READY_OTHER_TRAJ_MODE_ACTIVE=114
 string NOT_READY_OTHER_TRAJ_MODE_ACTIVE_STR="Another trajectory mode is already active. Please call stop_traj_mode service"
 
+uint16 NOT_READY_NOT_CONT_CYCLE_MODE=115
+string NOT_READY_NOT_CONT_CYCLE_MODE_STR="Continuous cycle mode not set. Please set the cycle mode to continuous"
+
 uint16 value
