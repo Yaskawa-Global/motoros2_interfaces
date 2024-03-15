@@ -8,8 +8,8 @@
 Changelog for package motoros2_interfaces
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.1 (2024-03-15)
+------------------
 * Add new ``enum`` value for incorrect cycle mode to ``MotionReadyEnum`` (`#10 <https://github.com/Yaskawa-Global/motoros2_interfaces/pull/10>`_)
 * Add definitions for ``GetActiveAlarmInfo`` service (`#9 <https://github.com/Yaskawa-Global/motoros2_interfaces/pull/9>`_)
 * Contributors: gavanderhoorn, John Rose
