@@ -9,7 +9,7 @@ uint8 SUCCESS=1
 string SUCCESS_STR=""
 
 uint8 WRONG_MODE=2
-string WRONG_MODE_STR="Must call queue_traj_point service"
+string WRONG_MODE_STR="Must call start_point_queue_mode service"
 
 uint8 INIT_FAILURE=3
 string INIT_FAILURE_STR="Failed to initialize the streaming trajectory"
