@@ -61,4 +61,10 @@ string NOT_READY_OTHER_TRAJ_MODE_ACTIVE_STR="Another trajectory mode is already 
 uint16 NOT_READY_NOT_CONT_CYCLE_MODE=115
 string NOT_READY_NOT_CONT_CYCLE_MODE_STR="Continuous cycle mode not set. Please set the cycle mode to continuous"
 
+uint16 NOT_READY_ECO_MODE=116
+string NOT_READY_ECO_MODE_STR="Couldn't disable eco mode"
+
+uint16 NOT_READY_SERVO_ON_TIMEOUT=117
+string NOT_READY_SERVO_ON_TIMEOUT_STR="Timed out while waiting for servo on"
+
 uint16 value
