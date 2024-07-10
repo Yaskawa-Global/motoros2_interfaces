@@ -8,6 +8,11 @@
 Changelog for package motoros2_interfaces
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Correct message for ``WRONG_MODE`` error (point queuing sub system) (`#15 <https://github.com/Yaskawa-Global/motoros2_interfaces/pull/15>`_)
+* Contributors: John Rose
+
 0.1.1 (2024-03-15)
 ------------------
 * Add new ``enum`` value for incorrect cycle mode to ``MotionReadyEnum`` (`#10 <https://github.com/Yaskawa-Global/motoros2_interfaces/pull/10>`_)
