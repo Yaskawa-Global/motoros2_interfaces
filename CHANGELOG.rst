@@ -8,8 +8,8 @@
 Changelog for package motoros2_interfaces
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.2 (2024-07-10)
+------------------
 * Correct message for ``WRONG_MODE`` error (point queuing sub system) (`#15 <https://github.com/Yaskawa-Global/motoros2_interfaces/pull/15>`_)
 * Contributors: John Rose
 
