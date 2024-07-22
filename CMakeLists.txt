@@ -23,6 +23,7 @@ set(msg_files
 
 set(srv_files
   srv/GetActiveAlarmInfo.srv
+  srv/ListInformJobs.srv
   srv/QueueTrajPoint.srv
   srv/ReadMRegister.srv
   srv/ReadSingleIO.srv
