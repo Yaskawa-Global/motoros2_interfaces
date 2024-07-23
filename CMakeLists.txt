@@ -15,6 +15,7 @@ set(msg_files
   msg/AlarmInfo.msg
   msg/AlarmCauseRemedy.msg
   msg/ErrorInfo.msg
+  msg/InformJobCrudResultCodes.msg
   msg/IoResultCodes.msg
   msg/MotionReadyEnum.msg
   msg/QueueResultEnum.msg

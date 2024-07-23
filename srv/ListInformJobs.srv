@@ -9,6 +9,8 @@
 
 # Result of the service invocation. Values other than one (1) signal failure.
 #
+# Values defined in 'motoros2_interfaces/msg/InformJobCrudResultCodes'.
+#
 # NOTE: future versions of this service may use a different set of result
 # codes. Always make sure to compare against defined named constants instead
 # of integers directly.
