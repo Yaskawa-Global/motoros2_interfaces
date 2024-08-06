@@ -1,0 +1,28 @@
+# SPDX-FileCopyrightText: 2024, Yaskawa America, Inc.
+# SPDX-FileCopyrightText: 2024, Delft University of Technology
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# empty request
+
+---
+
+# Result of the service invocation. Values other than one (1) signal failure.
+#
+# Values defined in 'motoros2_interfaces/msg/InformJobCrudResultCodes'.
+#
+# NOTE: future versions of this service may use a different set of result
+# codes. Always make sure to compare against defined named constants instead
+# of integers directly.
+uint32 result_code
+
+# string representation of the value in 'result_code', for humans
+string message
+
+# The list of jobs present on the controller.
+#
+# NOTE:
+# - these are job names, not filenames, and thus will not include the file
+#   extension (JBI)
+# - character encodings other than ASCII are only partially supported
+string[] names

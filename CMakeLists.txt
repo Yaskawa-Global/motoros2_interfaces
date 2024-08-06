@@ -15,6 +15,7 @@ set(msg_files
   msg/AlarmInfo.msg
   msg/AlarmCauseRemedy.msg
   msg/ErrorInfo.msg
+  msg/InformJobCrudResultCodes.msg
   msg/IoResultCodes.msg
   msg/MotionReadyEnum.msg
   msg/QueueResultEnum.msg
@@ -23,6 +24,7 @@ set(msg_files
 
 set(srv_files
   srv/GetActiveAlarmInfo.srv
+  srv/ListInformJobs.srv
   srv/QueueTrajPoint.srv
   srv/ReadMRegister.srv
   srv/ReadSingleIO.srv
