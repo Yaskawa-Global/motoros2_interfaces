@@ -61,4 +61,7 @@ string NOT_READY_OTHER_TRAJ_MODE_ACTIVE_STR="Another trajectory mode is already 
 uint16 NOT_READY_NOT_CONT_CYCLE_MODE=115
 string NOT_READY_NOT_CONT_CYCLE_MODE_STR="Continuous cycle mode not set. Please set the cycle mode to continuous"
 
+uint16 NOT_READY_MAJOR_ALARM=116
+string NOT_READY_MAJOR_ALARM_STR="Major Alarms can't be reset. Please check the teach pendant"
+
 uint16 value
