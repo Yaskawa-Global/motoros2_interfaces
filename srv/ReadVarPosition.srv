@@ -5,7 +5,7 @@
 
 uint32 var_number
 ---
-# legal values defined in IoResultCodes.msg
+# legal values defined in VarResultCodes.msg
 uint32 result_code
 string message
 bool success
