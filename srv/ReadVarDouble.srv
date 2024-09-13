@@ -9,4 +9,4 @@ uint32 var_number
 uint32 result_code
 string message
 bool success
-uint32 value
+int32 value

@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 uint32 var_number
-uint32 value
+int32 value
 ---
 # legal values defined in VarResultCodes.msg
 uint32 result_code
