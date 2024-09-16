@@ -8,6 +8,12 @@
 Changelog for package motoros2_interfaces
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add ``MotionNotReady`` codes for major alarms, power saving mode, and servo timeout (`#17 <https://github.com/Yaskawa-Global/motoros2_interfaces/pull/17>`_ and `#23 <https://github.com/Yaskawa-Global/motoros2_interfaces/pull/23>`_)
+* Add definition for ``ListInformJobs`` service (`#21 <https://github.com/Yaskawa-Global/motoros2_interfaces/pull/21>`_)
+* Contributors: gavanderhoorn, Jimmy McElwain
+
 0.1.2 (2024-07-10)
 ------------------
 * Correct message for ``WRONG_MODE`` error (point queuing sub system) (`#15 <https://github.com/Yaskawa-Global/motoros2_interfaces/pull/15>`_)
