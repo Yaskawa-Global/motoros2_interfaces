@@ -59,9 +59,15 @@ uint16 NOT_READY_OTHER_TRAJ_MODE_ACTIVE=114
 string NOT_READY_OTHER_TRAJ_MODE_ACTIVE_STR="Another trajectory mode is already active. Please call stop_traj_mode service"
 
 uint16 NOT_READY_NOT_CONT_CYCLE_MODE=115
-string NOT_READY_NOT_CONT_CYCLE_MODE_STR="Continuous cycle mode not set. Please set the cycle mode to continuous"
+string NOT_READY_NOT_CONT_CYCLE_MODE_STR="AUTO cycle mode not set. Please set the cycle mode to AUTO"
 
 uint16 NOT_READY_MAJOR_ALARM=116
 string NOT_READY_MAJOR_ALARM_STR="Major Alarms can't be reset. Please check the teach pendant"
+
+uint16 NOT_READY_ECO_MODE=117
+string NOT_READY_ECO_MODE_STR="Couldn't disable eco mode"
+
+uint16 NOT_READY_SERVO_ON_TIMEOUT=118
+string NOT_READY_SERVO_ON_TIMEOUT_STR="Timed out while waiting for servo on"
 
 uint16 value
