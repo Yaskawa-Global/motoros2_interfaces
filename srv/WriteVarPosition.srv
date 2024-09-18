@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: 2024, Yaskawa Europe, GmbH
+# SPDX-FileCopyrightText: 2024, Delft University of Technology
+#
+# SPDX-License-Identifier: Apache-2.0
+
+uint32 var_number
+
+# only poses defined in 'base' frame will be accepted
+#
+# NOTE: the ROS-Industrial 'base' frame, not Yaskawa Base frame
+#
+# NOTE 2: it's the responsibility of the client to transform poses into this
+#         frame. The server will reject poses not already in 'base' frame.
+geometry_msgs/PoseStamped value
+---
+# legal values defined in VarResultCodes.msg
+uint32 result_code
+string message
+bool success
