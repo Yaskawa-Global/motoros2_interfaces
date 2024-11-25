@@ -8,6 +8,10 @@
 Changelog for package motoros2_interfaces
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Move Init_Trajectory_Status enum from MotoROS2 repo to .msg (`#26 <https://github.com/Yaskawa-Global/motoros2_interfaces/pull/26>`_)
+
 0.1.3 (2024-09-16)
 ------------------
 * Add ``MotionNotReady`` codes for major alarms, power saving mode, and servo timeout (`#17 <https://github.com/Yaskawa-Global/motoros2_interfaces/pull/17>`_ and `#23 <https://github.com/Yaskawa-Global/motoros2_interfaces/pull/23>`_)
