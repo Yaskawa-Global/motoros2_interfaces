@@ -8,9 +8,10 @@
 Changelog for package motoros2_interfaces
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.1.4 (2024-11-25)
------------
+0.1.4 (2024-11-27)
+------------------
 * Move ``Init_Trajectory_Status`` enum from MotoROS2 repo to ``.msg`` (`#26 <https://github.com/Yaskawa-Global/motoros2_interfaces/pull/26>`_)
+* Contributors: Jimmy McElwain
 
 0.1.3 (2024-09-16)
 ------------------
