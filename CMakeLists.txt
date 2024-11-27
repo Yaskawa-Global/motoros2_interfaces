@@ -24,8 +24,11 @@ set(msg_files
 )
 
 set(srv_files
+  srv/DeleteInformJob.srv
   srv/GetActiveAlarmInfo.srv
+  srv/GetInformJob.srv
   srv/ListInformJobs.srv
+  srv/PutInformJob.srv
   srv/QueueTrajPoint.srv
   srv/ReadMRegister.srv
   srv/ReadSingleIO.srv
