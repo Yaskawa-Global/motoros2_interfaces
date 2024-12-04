@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: 2024, Yaskawa Europe, GmbH
+# SPDX-FileCopyrightText: 2024, Delft University of Technology
+#
+# SPDX-License-Identifier: Apache-2.0
+
+uint32 var_number
+---
+# legal values defined in VarResultCodes.msg
+uint32 result_code
+string message
+bool success
+int32 value
