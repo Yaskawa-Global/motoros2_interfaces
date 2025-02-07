@@ -8,6 +8,11 @@
 Changelog for package motoros2_interfaces
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.2.0 (2025-02-04)
+------------------
+* Change ``QueueResultEnum`` ``value`` type to match ``Init_Trajectory_Status`` enum ``value`` type. ``uint8 -> uint16`` (`#30 <https://github.com/Yaskawa-Global/motoros2_interfaces/pull/30>`_)
+* Contributors: Jimmy McElwain
+
 0.1.4 (2024-11-27)
 ------------------
 * Move ``Init_Trajectory_Status`` enum from MotoROS2 repo to ``.msg`` (`#26 <https://github.com/Yaskawa-Global/motoros2_interfaces/pull/26>`_)
