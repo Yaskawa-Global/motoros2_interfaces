@@ -4,10 +4,11 @@
 # SPDX-License-Identifier: Apache-2.0
 
 # Enable the robot and activate the real-time streaming interface. This activates
-# a TCP server which listens on port 50245 for a connection from an external PC.
-# The remote PC must stream positional increments at the rate returned by this
-# service. Please note that the streaming data is not a ROS2 message, but a raw
-# TCP connection which follows the protocol described in `todo`. 
+# a UDP server which listens on port 8889 (default) for a connection from an
+# external PC. The robot will accept positional increments from the remote PC
+# at the rate returned by this service. Please note that the streaming data is not
+# a ROS2 message, but a raw UDP connection which follows the protocol described in
+# `https://github.com/Yaskawa-Global/motoros2/tree/main/doc/rt_control.md`. 
 #
 # It is recommended to monitor the 'robot_status' topic prior to invoking this
 # service. This service can only succeed if 'mode' == AUTO, 'e_stopped' == FALSE,
@@ -18,10 +19,6 @@
 
 # Joints or Cartesian
 ControlModeEnum control_mode
-
-# The joint names must be listed in the order that the positional data will be 
-# received during execution. The order must be consistent for the entire session.
-string[] joint_names
 
 ---
 # Result of the service invocation. Values other than one (1) signal failure.
