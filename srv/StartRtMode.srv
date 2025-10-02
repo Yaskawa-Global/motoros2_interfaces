@@ -31,6 +31,27 @@ MotionReadyEnum result_code
 # String representation of the value in 'result_code', for humans
 string message
 
+# ------------------
+# CONFIGURATION INFO
+# ------------------
+
 # This period defines the rate at which motion increments will be accepted. 
-# (milliseconds)
+# (milliseconds). This is controlled by the number of axes connected to the
+# robot controller.
 uint16 period
+
+# Timeout for real time motion commands. If a command packet is not received
+# within this number of milliseconds, the motion mode will be cancelled.
+# The default for this timeout is 30 seconds. It can be modified in the 
+# motoros2_config.yaml configuration file.
+int32 timeout_for_rt_msg
+
+# Each command packet must increment the sequence ID. If too many packets
+# are lost during communication, then it will be assumed that the PC is not
+# in sync with the robot.
+#
+# If the sequence ID of an incoming packet is different from the previous
+# command by a value greater than this, then the connection will be dropped.
+# The motion mode must be reactivated to be used again. The default for this
+# is 10. It can be modified in the motoros2_config.yaml configuration file.
+int32 max_sequence_diff_for_rt_msg
