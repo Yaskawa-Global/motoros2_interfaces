@@ -1,0 +1,31 @@
+# SPDX-FileCopyrightText: 2024, Yaskawa America, Inc.
+# SPDX-FileCopyrightText: 2024, Delft University of Technology
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# The request does not provide a 'name' field as MotoROS2 will use the job name
+# specified in the job header (ie: "//NAME <JOB_NAME>")
+
+# The (binary) contents of the job file as bytes. This should contain the
+# complete file, including the full job header and the instruction section.
+#
+# Pay extra attention to encoding the job file contents, it should be in the
+# encoding expected by the Yaskawa controller and should use Windows
+# line-endings. MotoROS2 will not process the submitted data in any way, so
+# it has to be valid job (JBI) content already.
+#
+# Loading the job will fail if it's not in a format supported by the controller.
+#
+# NOTE: as mentioned above, the name of the job to create on the controller
+# will be taken from the job header.
+uint8[] contents
+
+---
+
+# Result of the service invocation. Values other than one (1) signal failure.
+#
+# NOTE: future versions of this service may use a different set of result codes
+uint32 result_code
+
+# string representation of the value in 'result_code', for humans
+string message
