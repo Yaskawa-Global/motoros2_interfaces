@@ -18,6 +18,7 @@ set(msg_files
   msg/InformJobCrudResultCodes.msg
   msg/InitTrajEnum.msg
   msg/IoResultCodes.msg
+  msg/VarResultCodes.msg
   msg/MotionReadyEnum.msg
   msg/QueueResultEnum.msg
   msg/SelectionResultCodes.msg
@@ -30,6 +31,12 @@ set(srv_files
   srv/ReadMRegister.srv
   srv/ReadSingleIO.srv
   srv/ReadGroupIO.srv
+  srv/ReadVarByte.srv
+  srv/ReadVarDouble.srv
+  srv/ReadVarInteger.srv
+  srv/ReadVarPosition.srv
+  srv/ReadVarReal.srv
+  srv/ReadVarString.srv
   srv/ResetError.srv
   srv/SelectMotionTool.srv
   srv/StartTrajMode.srv
@@ -37,6 +44,12 @@ set(srv_files
   srv/WriteMRegister.srv
   srv/WriteSingleIO.srv
   srv/WriteGroupIO.srv
+  srv/WriteVarByte.srv
+  srv/WriteVarDouble.srv
+  srv/WriteVarInteger.srv
+  srv/WriteVarPosition.srv
+  srv/WriteVarReal.srv
+  srv/WriteVarString.srv
 )
 
 if(BUILD_TESTING)
