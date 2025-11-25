@@ -35,13 +35,13 @@ uint16 NOT_READY_NOT_REMOTE=105
 string NOT_READY_NOT_REMOTE_STR="The teach pendant must be in REMOTE mode"
 
 uint16 NOT_READY_SERVO_OFF=106
-string NOT_READY_SERVO_OFF_STR="Servo power is OFF. Please call start_traj_mode or start_point_queue_mode service"
+string NOT_READY_SERVO_OFF_STR="Servo power is OFF. Please call one of the start_xxx_mode services"
 
 uint16 NOT_READY_HOLD=107
 string NOT_READY_HOLD_STR="The controller is in HOLD"
 
 uint16 NOT_READY_JOB_NOT_STARTED=108
-string NOT_READY_JOB_NOT_STARTED_STR="The INIT_ROS job has not started. Please call start_traj_mode or start_point_queue_mode service"
+string NOT_READY_JOB_NOT_STARTED_STR="The INIT_ROS job has not started. Please call one of the start_xxx_mode services"
 
 uint16 NOT_READY_NOT_ON_WAIT_CMD=109
 string NOT_READY_NOT_ON_WAIT_CMD_STR="INFORM job is not on a WAIT command. Check the format of INIT_ROS"
@@ -69,5 +69,8 @@ string NOT_READY_ECO_MODE_STR="Couldn't disable eco mode"
 
 uint16 NOT_READY_SERVO_ON_TIMEOUT=118
 string NOT_READY_SERVO_ON_TIMEOUT_STR="Timed out while waiting for servo on"
+
+uint16 NOT_READY_INVALID_SELECTION=119
+string NOT_READY_INVALID_SELECTION_STR="Invalid selection or arguments"
 
 uint16 value

@@ -14,6 +14,7 @@ find_package(trajectory_msgs REQUIRED)
 set(msg_files
   msg/AlarmInfo.msg
   msg/AlarmCauseRemedy.msg
+  msg/ControlModeEnum.msg
   msg/ErrorInfo.msg
   msg/InformJobCrudResultCodes.msg
   msg/InitTrajEnum.msg
@@ -34,6 +35,7 @@ set(srv_files
   srv/SelectMotionTool.srv
   srv/StartTrajMode.srv
   srv/StartPointQueueMode.srv
+  srv/StartRtMode.srv
   srv/WriteMRegister.srv
   srv/WriteSingleIO.srv
   srv/WriteGroupIO.srv
