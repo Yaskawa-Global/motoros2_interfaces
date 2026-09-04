@@ -1,0 +1,31 @@
+# SPDX-FileCopyrightText: 2022-2023, Yaskawa America, Inc.
+# SPDX-FileCopyrightText: 2022-2023, Delft University of Technology
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Submit a trajectory point to the continuous motion queue (streaming).
+#
+# Unlike queue_traj_point (which accepts at most one outstanding point),
+# this service pushes into a multi-point FIFO and reports queue depth and
+# whether an underrun occurred since the previous call to this service.
+#
+# The start_point_queue_mode service must have been invoked first
+
+string[] joint_names
+trajectory_msgs/JointTrajectoryPoint point
+
+---
+# Result of the service invocation. Values other than one (1) signal failure.
+# Refer to QueueResultEnum.msg for defined values
+QueueResultEnum result_code
+
+# string representation of the value in 'result_code', for humans
+string message
+
+# number of points currently queued (after this call)
+uint16 queue_size
+
+# TRUE if the point queue ran empty (underran) at any time since the
+# previous call to THIS service; read-and-cleared by this call. The first
+# call after startup is expected to report TRUE (baseline).
+bool underran_since_last_call

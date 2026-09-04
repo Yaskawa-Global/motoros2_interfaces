@@ -27,6 +27,7 @@ set(srv_files
   srv/GetActiveAlarmInfo.srv
   srv/ListInformJobs.srv
   srv/QueueTrajPoint.srv
+  srv/QueueTrajPointStream.srv
   srv/ReadMRegister.srv
   srv/ReadSingleIO.srv
   srv/ReadGroupIO.srv

@@ -23,4 +23,7 @@ string INVALID_JOINT_LIST_STR="Point must contain data for all joints"
 uint16 UNABLE_TO_PROCESS_POINT=6
 string UNABLE_TO_PROCESS_POINT_STR="Error while processing the trajectory point. Check debug log for more details"
 
+uint16 QUEUE_FULL=7
+string QUEUE_FULL_STR="Point queue is full. Please resend the next point shortly"
+
 uint16 value
