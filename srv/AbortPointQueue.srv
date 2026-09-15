@@ -3,8 +3,8 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-# Immediately stop message processing, discard every trajectory point the
-# controller has already accepted, and exit the active motion mode.
+# Immediately stop point-queue message processing, discard every trajectory
+# point the controller has already accepted, and exit point-queue motion mode.
 #
 # Unlike 'stop_traj_mode' -- which refuses while the increment queue still holds
 # work -- this service always exits the motion mode, whatever the queue holds.
@@ -19,20 +19,22 @@
 # emergency-stop assurance. Do NOT present this service to an operator as an
 # emergency stop.
 #
-# NOTE: as with 'stop_traj_mode', the underlying stop sequence toggles the
-# controller's HOLD state ON and then OFF. If an operator had set HOLD at the
-# pendant, that HOLD is RELEASED by this service.
+# On success, the underlying stop sequence applies and releases command HOLD.
+# Pendant and external HOLD are separate controller HOLD sources. On failure,
+# command HOLD and the software stop remain asserted.
 #
-# The request is empty: the abort is unconditional and takes no arguments.
+# The request is empty. The service rejects the request without side effects if
+# point-queue mode is not active.
 
 ---
 # TRUE if the abort completed: message processing stopped, every accepted point
 # discarded, and the motion mode exited.
 #
-# FALSE means the stop could not be confirmed - message processing did not
-# quiesce in time, or an increment queue was locked and could not be cleared.
-# The motion mode is exited either way, but motion may not have stopped: treat
-# the controller as unsafe and use the physical E-stop.
+# FALSE means point-queue mode was not active, or the stop could not be
+# confirmed because message processing did not quiesce in time, an increment
+# queue could not be cleared, or a controller HOLD operation failed. After an
+# attempted abort, the motion mode is exited and the software stop remains
+# latched on failure. Treat the controller as unsafe and use the physical E-stop.
 bool success
 
 # Human-readable detail, always populated. On failure it names what could not be
