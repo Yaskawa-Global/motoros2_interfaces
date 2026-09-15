@@ -1,3 +1,40 @@
+# SPDX-FileCopyrightText: 2022-2023, Yaskawa America, Inc.
+# SPDX-FileCopyrightText: 2022-2023, Delft University of Technology
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Immediately stop message processing, discard every trajectory point the
+# controller has already accepted, and exit the active motion mode.
+#
+# Unlike 'stop_traj_mode' -- which refuses while the increment queue still holds
+# work -- this service always exits the motion mode, whatever the queue holds.
+# Discarding accepted motion is the intended behaviour, not a side effect: this
+# is the escalation path for when a graceful stop cannot be honoured.
+#
+# >>> SOFTWARE STOP ONLY - NOT A SAFETY-RATED EMERGENCY STOP <<<
+# This stops the arm as fast as software can, and no faster. It is subject to
+# controller scheduling, message-processing latency and the servo deceleration
+# ramp, and it does nothing at all if MotoROS2 or the Agent link is unhealthy.
+# Only the physical safety circuit (E-stop button, safety fence, PFL) provides
+# emergency-stop assurance. Do NOT present this service to an operator as an
+# emergency stop.
+#
+# NOTE: as with 'stop_traj_mode', the underlying stop sequence toggles the
+# controller's HOLD state ON and then OFF. If an operator had set HOLD at the
+# pendant, that HOLD is RELEASED by this service.
+#
+# The request is empty: the abort is unconditional and takes no arguments.
+
 ---
+# TRUE if the abort completed: message processing stopped, every accepted point
+# discarded, and the motion mode exited.
+#
+# FALSE means the stop could not be confirmed - message processing did not
+# quiesce in time, or an increment queue was locked and could not be cleared.
+# The motion mode is exited either way, but motion may not have stopped: treat
+# the controller as unsafe and use the physical E-stop.
 bool success
+
+# Human-readable detail, always populated. On failure it names what could not be
+# confirmed.
 string message
