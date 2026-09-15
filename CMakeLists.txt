@@ -24,6 +24,7 @@ set(msg_files
 )
 
 set(srv_files
+  srv/AbortPointQueue.srv
   srv/GetActiveAlarmInfo.srv
   srv/ListInformJobs.srv
   srv/QueueTrajPoint.srv
