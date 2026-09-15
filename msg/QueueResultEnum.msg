@@ -26,4 +26,7 @@ string UNABLE_TO_PROCESS_POINT_STR="Error while processing the trajectory point.
 uint16 QUEUE_FULL=7
 string QUEUE_FULL_STR="Point queue is full. Please resend the next point shortly"
 
+uint16 SEQUENCE_MISMATCH=8
+string SEQUENCE_MISMATCH_STR="Point sequence is stale or out of order"
+
 uint16 value

@@ -14,6 +14,10 @@
 string[] joint_names
 trajectory_msgs/JointTrajectoryPoint point
 
+# Monotonic modulo-16-bit submission sequence. The first current-position
+# baseline after start_point_queue_mode establishes the starting value.
+uint16 sequence
+
 ---
 # Result of the service invocation. Values other than one (1) signal failure.
 # Refer to QueueResultEnum.msg for defined values
@@ -29,3 +33,8 @@ uint16 queue_size
 # previous call to THIS service; read-and-cleared by this call. The first
 # call after startup is expected to report TRUE (baseline).
 bool underran_since_last_call
+
+# Echoed sequence state for retry/recovery diagnostics.
+uint16 sequence
+uint16 next_expected_sequence
+bool duplicate_acknowledged
