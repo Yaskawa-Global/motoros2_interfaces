@@ -1,0 +1,28 @@
+# SPDX-FileCopyrightText: 2024, Yaskawa America, Inc.
+# SPDX-FileCopyrightText: 2024, Delft University of Technology
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# NOTE:
+# - do not include the file extension (JBI), only the name of the job
+# - character encodings other than ASCII are only partially supported
+# - a job with this name must exist on the controller
+# - a job with this name must not be currently running on the controller
+string name
+
+---
+
+# Result of the service invocation. Values other than one (1) signal failure.
+#
+# NOTE: future versions of this service may use a different set of result codes
+uint32 result_code
+
+# string representation of the value in 'result_code', for humans
+string message
+
+# The contents of the job file as raw bytes. This will contain the complete
+# file, including the full job header and the instruction section. MotoROS2 has
+# not processed the data in any way, so this is a verbatim copy of the job file.
+#
+# NOTE: this field may be left uninitialised in case result_code != 1.
+uint8[] contents
